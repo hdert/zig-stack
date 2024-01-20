@@ -16,7 +16,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     _ = b.addModule("Stack", .{
-        .source_file = .{ .path = "src/Stack.zig" },
+        .root_source_file = .{ .path = "src/Stack.zig" },
     });
 
     const lib = b.addStaticLibrary(.{
